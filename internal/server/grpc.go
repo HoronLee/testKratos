@@ -5,7 +5,6 @@ import (
 	"testKratos/internal/conf"
 	"testKratos/internal/service"
 
-	"github.com/go-kratos/kratos/contrib/middleware/validate/v2"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/middleware/recovery"
 	"github.com/go-kratos/kratos/v2/transport/grpc"
@@ -16,7 +15,7 @@ func NewGRPCServer(c *conf.Server, greeter *service.GreeterService, logger log.L
 	var opts = []grpc.ServerOption{
 		grpc.Middleware(
 			recovery.Recovery(),
-			validate.ProtoValidate(),
+			ProtoValidate(),
 		),
 	}
 	if c.Grpc.Network != "" {
