@@ -7,13 +7,13 @@
 package main
 
 import (
+	"github.com/go-kratos/kratos/v2"
+	"github.com/go-kratos/kratos/v2/log"
 	"testKratos/internal/biz"
 	"testKratos/internal/conf"
 	"testKratos/internal/data"
 	"testKratos/internal/server"
 	"testKratos/internal/service"
-	"github.com/go-kratos/kratos/v2"
-	"github.com/go-kratos/kratos/v2/log"
 )
 
 import (
